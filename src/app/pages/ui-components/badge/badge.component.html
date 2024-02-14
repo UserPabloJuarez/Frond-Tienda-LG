@@ -1,0 +1,153 @@
+
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Registro de Ticket</mat-card-title>
+  </mat-card-header>
+  <mat-card class="b-1 shadow-none">
+    <mat-card-content>
+  <div class="container col-md-5">
+    <h1>Descripcion Detallada</h1>
+    <form action="">
+      <div class="mb-3">
+        <label for="apellidos">Tipo de Falla </label>
+        <input type="text" id="apellidos" class="form-control" name="apellidos" [(ngModel)]="incidenciaNueva.falla">
+      </div>
+        <div class="mb-3">
+          <label for="nombres">Tipo de Electrodomestico </label>
+        <input type="text" id="nombres" class="form-control" name="nombres" [(ngModel)]="incidenciaNueva.electrodomestico">
+        </div>
+        <div class="mb-3">
+          <label for="edad">Marca </label>
+          <input type="text" id="edad" class="form-control" name="edad" [(ngModel)]="incidenciaNueva.marca">
+        </div>
+        <div class="mb-3">
+          <label for="sexo">Modelos </label>
+        <input type="text" id="sexo" class="form-control" name="sexo" [(ngModel)]="incidenciaNueva.modelos">
+        </div>
+        <button class="btn btn-primary" (click)="agregarIncidencia()">Guardar</button>
+    </form>
+  </div>
+</mat-card-content>
+</mat-card>
+</mat-card>
+
+
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Gestion de Incidencias LG</mat-card-title>
+  </mat-card-header>
+<div class="container col-md-5">
+  <h1>Detalles Tecnicos</h1>
+  <form action="">
+  <div class="mb-3">
+      <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+      <div class="col-md-8">
+          <textarea class="form-control" id="message" name="message" placeholder="Comentarios." rows="10"></textarea>
+      </div>
+  </div>
+  <div class="mb-3">
+    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+    <div class="col-md-8">
+        <input id="phone" name="phone" type="text" placeholder="Referencias" class="form-control">
+    </div>
+</div>
+  </form>
+</div>
+</mat-card>
+
+
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Datos del Afectado</mat-card-title>
+  </mat-card-header>
+  <mat-card class="b-1 shadow-none">
+    <mat-card-content>
+  <div class="container col-md-5">
+    <h1>Datos del cliente</h1>
+    <form action="">
+      <div class="mb-3">
+        <label for="apellidos">Nombre </label>
+        <input type="text" id="apellidos" class="form-control" name="apellidos" [(ngModel)]="incidenciaNueva.falla">
+      </div>
+        <div class="mb-3">
+          <label for="nombres">Apellidos </label>
+        <input type="text" id="nombres" class="form-control" name="nombres" [(ngModel)]="incidenciaNueva.electrodomestico">
+        </div>
+        <div class="mb-3">
+          <label for="edad">Numero de DNI</label>
+          <input type="text" id="edad" class="form-control" name="edad" [(ngModel)]="incidenciaNueva.marca">
+        </div>
+        <div class="mb-3">
+          <label for="sexo">Direccion </label>
+        <input type="text" id="sexo" class="form-control" name="sexo" [(ngModel)]="incidenciaNueva.modelos">
+        </div>
+        <div class="mb-3">
+          <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+          <div class="col-md-8">
+              <textarea class="form-control" id="message" name="message" placeholder="Comentarios." rows="10"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-primary" (click)="agregarIncidencia()">Guardar</button>
+    </form>
+  </div>
+</mat-card-content>
+</mat-card>
+</mat-card>
+
+<!--mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Registro de Incidencias</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p>
+          <span matBadge="4" matBadgeOverlap="false" class="f-w-500 text-muted">Text with a badge</span>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p>
+          <span matBadge="4" matBadgeOverlap="false" matBadgeSize="large" class="f-w-500 text-muted">Text with large
+            badge</span>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p class="f-w-500 text-muted">
+          Button with a badge on the left
+          <button mat-flat-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+            Action
+          </button>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p class="f-w-500 text-muted">
+          Icon with a badge
+          <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p>
+          Button toggles badge visibility
+          <button mat-flat-button color="primary" matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+            Hide
+          </button>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+
+
+  </mat-card-content>
+</mat-card-->
